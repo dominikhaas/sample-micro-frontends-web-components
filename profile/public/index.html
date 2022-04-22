@@ -14,6 +14,15 @@
 </head>
 
 <body>
-<profile-details name="Hans"></profile-details>
+	<profile-details name="Hans" id="profileDetails"></profile-details>
+
+
+	<script type="text/javascript">
+		let elementById = document.getElementById('profileDetails');
+
+		elementById.addEventListener('myError', (e) => {
+			console.log("Got: " + e.detail);
+		} )
+	</script>
 </body>
 </html>
