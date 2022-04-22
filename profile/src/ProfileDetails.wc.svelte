@@ -1,4 +1,4 @@
-<svelte:options tag="profile-details"></svelte:options>
+<svelte:options tag="profile-details"/>
 <script lang="ts">
     import {onMount} from "svelte";
 
@@ -37,18 +37,18 @@
 </script>
 <main>
     <div class="logo">
-        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg">
+        <img alt="Svelte logo" class="logo" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg">
     </div>
     <div class="profile">
         {#if profileDetails}
-            <Avatar profileId={profile} baseUrl={baseurl} ></Avatar>
+            <Avatar profileId={profile} baseUrl={baseurl} />
             <div class="details">
                 <h1 class="name">{profileDetails?.name} {profileDetails?.surname}</h1>
                 <span  class="title">{profileDetails?.title}</span>
                 <hr>
-                <label>Site</label> <span>{profileDetails?.site}</span>
-                <label>Email</label> <span>{profileDetails?.email}</span>
-                <label>Phone</label> <span>{profileDetails?.phone}</span>
+                <span class="label">Site</span> <span>{profileDetails?.site}</span>
+                <span class="label">Email</span> <span>{profileDetails?.email}</span>
+                <span class="label">Phone</span> <span>{profileDetails?.phone}</span>
                 <hr>
                 <a on:click={showLocations}>Show locations</a>
             </div>
@@ -121,7 +121,7 @@
         padding: 0.3em;
     }
 
-    label {
+    .label {
         font-weight: bold;
     }
 
