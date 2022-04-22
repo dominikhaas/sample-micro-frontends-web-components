@@ -14,16 +14,19 @@
 </head>
 
 <body>
-	<sample-app name="Hans" id="profileDetails"></sample-app>
 
-	<profile-details profile="1337"></profile-details>
 
+	<profile-details profile="1337" id="profileDetails"></profile-details>
 	<script type="text/javascript">
+
+
 		let elementById = document.getElementById('profileDetails');
 
-		elementById.addEventListener('myError', (e) => {
+		elementById.addEventListener('showLocations', (e) => {
 			console.log("Got: " + e.detail);
 		} )
+
+
 	</script>
 </body>
 </html>
