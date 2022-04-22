@@ -1,4 +1,4 @@
-<svelte:options tag="profile-details"></svelte:options>
+<svelte:options tag="sample-app"></svelte:options>
 <script lang="ts">
 	import {createEventDispatcher} from "svelte";
 
