@@ -22,12 +22,16 @@
 
     onMount(async () => {
         let url = baseurl + "/profile/" + profile  + "/profile.json";
-        const result = await fetch(url);
 
-        if(result.ok) {
-            profileDetails = await result.json();
-        } else {
-            error = "Could not load profile details - status code: " + result.status
+        try {
+            const result = await fetch(url);
+            if(result.ok) {
+                profileDetails = await result.json();
+            } else {
+                error = "Could not load profile details - status code: " + result.status
+            }
+        } catch (e) {
+            error = "Could not load profile details - error message: " + e.message
         }
     });
 </script>
