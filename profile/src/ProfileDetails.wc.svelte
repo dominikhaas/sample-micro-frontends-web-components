@@ -1,11 +1,16 @@
 <svelte:options tag="profile-details"></svelte:options>
 <script lang="ts">
     import Avatar from "./Avatar.svelte";
+
+    export let profile: string;
+    export let baseurl: string = "http://localhost:8080";
+
 </script>
 
 <main>
     <h1>Profile of</h1>
-    <Avatar profileId="1337" baseUrl="http://localhost:8080" ></Avatar>
+    <Avatar profileId={profile} baseUrl={baseurl} ></Avatar>
+    Id: {profile}
 </main>
 
 <style>
