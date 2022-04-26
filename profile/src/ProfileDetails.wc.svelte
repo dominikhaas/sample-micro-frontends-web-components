@@ -11,9 +11,9 @@
     let profileDetails: ProfileDetails;
     let error: string;
 
-    function showLocations() {
-        this.dispatchEvent(new CustomEvent('showLocations', {
-            detail: profile,
+    function showOnMap() {
+        this.dispatchEvent(new CustomEvent('map', {
+            detail: profileDetails.address,
             bubbles: true,
             cancelable: true,
             composed: true // makes the event jump shadow DOM boundary
@@ -50,7 +50,8 @@
                 <span class="label">Email</span> <span>{profileDetails?.email}</span>
                 <span class="label">Phone</span> <span>{profileDetails?.phone}</span>
                 <hr>
-                <a on:click={showLocations}>Show locations</a>
+                <span class="label">Address</span> <span>{profileDetails?.address}</span>
+                <a on:click={showOnMap}>Show on map</a>
             </div>
 
 

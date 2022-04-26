@@ -6,4 +6,5 @@ export interface ProfileDetails {
     name: string;
     surname: string;
     title: string;
+    address: string;
 }
