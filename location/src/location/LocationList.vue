@@ -1,5 +1,20 @@
+<script setup lang="ts">
+  import {locationStore} from "@/location/locationStore";
+  import {computed} from "vue";
+
+  const store = locationStore();
+
+  const locations = computed(() => store.locations);
+
+</script>
+
+
+
 <template>
-  <h1>Location list</h1>
+  <div>
+    <li v-for="location in locations" v-bind:key="location">
+      {{location}}
+    </li>
+  </div>
 </template>
 
-<script setup lang="ts"></script>
