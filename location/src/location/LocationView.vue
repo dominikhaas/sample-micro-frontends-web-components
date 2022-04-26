@@ -4,9 +4,31 @@ import LocationForm from "@/location/LocationForm.vue";
 </script>
 
 <template>
-  <h1>Locations</h1>
-  <div>
+  <div class="locations-view">
+    <h1>Locations</h1>
     <LocationList></LocationList>
     <LocationForm></LocationForm>
   </div>
 </template>
+
+<style>
+.locations-view {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "list form";
+  grid-template-columns: auto auto;
+}
+
+.locations-view > h1 {
+  grid-area: header;
+}
+
+location-list {
+  grid-area: list;
+}
+
+location-form {
+  grid-area: form;
+}
+</style>
