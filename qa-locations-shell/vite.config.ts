@@ -7,7 +7,14 @@ const path = require('path')
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      template: {
+        compilerOptions: {
+          // treat tags with prefix profile- as custom elements
+          isCustomElement: (tag) => tag.includes('profile-')
+        }
+      }
+    }),
     // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
     vuetify({
       autoImport: true,
