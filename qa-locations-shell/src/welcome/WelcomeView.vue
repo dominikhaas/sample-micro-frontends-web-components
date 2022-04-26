@@ -1,2 +1,2 @@
 <script setup lang="ts"></script>
-<template>Welcome!</template>
+<template><h1>Welcome!</h1></template>
