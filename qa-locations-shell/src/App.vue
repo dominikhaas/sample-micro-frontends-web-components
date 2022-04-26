@@ -5,24 +5,16 @@ const name = ref("qa-locations");
 <template>
   <v-app>
     <v-app-bar>
-        <h1 link to="/">{{ name }}</h1>
+      <h1>{{ name }}</h1>
     </v-app-bar>
-    <v-navigation-drawer  permanent=true>
+    <v-navigation-drawer v-bind:permanent="true">
       <v-list-item link to="/locations">
-        <v-list-item-icon>
-          mdi-home
-        </v-list-item-icon>
-        <v-list-item-content>
-          <v-list-item-title>Locations</v-list-item-title>
-        </v-list-item-content>
+        <v-list-item-icon> mdi-home </v-list-item-icon>
+        <v-list-item-title>Locations</v-list-item-title>
       </v-list-item>
       <v-list-item link to="/profile/1337">
-        <v-list-item-icon>
-          mdi-account-box
-        </v-list-item-icon>
-        <v-list-item-content>
-          <v-list-item-title>Your profile</v-list-item-title>
-        </v-list-item-content>
+        <v-list-item-icon> mdi-account-box </v-list-item-icon>
+        <v-list-item-title>Your profile</v-list-item-title>
       </v-list-item>
     </v-navigation-drawer>
     <v-main>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import router from "@/router";
 
-function showOnMap(payload: any) {
+function showOnMap(payload: CustomEvent) {
   const address = payload.detail;
 
   router.push({
@@ -17,6 +17,5 @@ function showOnMap(payload: any) {
     <profile-details v-bind:profile="$route.params.id" @map="showOnMap">
       <v-progress-circular></v-progress-circular>
     </profile-details>
-    <button @click="showOnMap">asdf</button>
   </div>
 </template>
