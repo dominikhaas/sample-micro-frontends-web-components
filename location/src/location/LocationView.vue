@@ -17,7 +17,8 @@ import LocationForm from "@/location/LocationForm.vue";
   grid-template-areas:
     "header header"
     "list form";
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 2em;
 }
 
 .locations-view > h1 {
