@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+
+	<title>Static local html site</title>
+
+
+	<script defer src='http://localhost:8080/build/bundle.js'></script>
+</head>
+
+<body>
+	<profile-details profile="1337" id="profileDetails"></profile-details>
+
+	<script type="text/javascript">
+		document.getElementById("profileDetails").addEventListener('map', (event) => {
+			console.log(event);
+		});
+	</script>
+</body
+
+
+
+
+</html>
