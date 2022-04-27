@@ -10,12 +10,14 @@
     "dev": "vite",
     "preview": "vite preview --port 5050",
     "test:e2e:ci": "start-server-and-test preview http://127.0.0.1:5050/ 'cypress run'",
-    "typecheck": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
+    "typecheck": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
+    "serve-wc": "sirv public-wc --no-clear -c --port 51337"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
     "pinia": "^2.0.13",
     "roboto-fontface": "*",
+    "sirv-cli": "^2.0.0",
     "vue": "^3.2.33",
     "webfontloader": "^1.0.0"
   },
