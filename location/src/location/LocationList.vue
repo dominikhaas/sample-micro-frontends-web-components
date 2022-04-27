@@ -18,14 +18,13 @@ function showLocation(location: LocationDto) {
 
 <template>
   <div>
-    <ul
+    <h3>Locations</h3>
+    <ul class="location-entry"
       v-for="location in locations"
       v-bind:key="location"
       @click="showLocation(location)"
     >
-      {{
-        location.title
-      }}
+      > {{location.title}} ({{location.city}})
     </ul>
   </div>
 </template>

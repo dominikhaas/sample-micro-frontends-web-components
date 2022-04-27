@@ -1,5 +1,7 @@
 export interface LocationDto {
   title: string;
+  city: string;
+  kind: string;
 }
 
 export class LocationService {
