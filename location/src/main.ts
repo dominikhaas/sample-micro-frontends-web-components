@@ -9,7 +9,7 @@ const pinia = createPinia()
 
 createApp(App)
     .use(pinia)
-    .mount('#app')
+    .mount('#location-app')
 
 const locationApp = defineCustomElement(App)
 customElements.define('location-app', locationApp)
