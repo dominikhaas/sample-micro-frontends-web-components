@@ -1,0 +1,73 @@
+.locations-view {
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "list form";
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 2em;
+
+    padding: 1em;
+
+    border: #41b883 2px dashed;
+}
+
+.locations-view > h1 {
+    grid-area: header;
+}
+
+.location-list {
+    grid-area: list;
+}
+
+.location-form {
+    grid-area: form;
+}
+
+.logo > img {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 1em;
+    right: 1em;
+}
+.logo {
+    position: relative;
+}
+
+.location-entry {
+    cursor: pointer;
+    display: block;
+    color: gray;
+}
+
+
+.details {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 0.6em;
+}
+
+
+.name {
+    grid-column: span 2;
+
+
+    margin-bottom: 0;
+
+    line-height: 1em;
+    padding: 0;
+}
+.city {
+    grid-column: span 2;
+    color: #237a94;
+}
+
+.label {
+    font-weight: bold;
+}
+
+hr {
+    grid-column: span 2;
+    width: 100%;
+    border: 0;
+}

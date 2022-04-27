@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-import App from "./App.vue";
+import App from "./App.ce.vue";
 import { createPinia } from "pinia";
 
 import { defineCustomElement } from "vue";

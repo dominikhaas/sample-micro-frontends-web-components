@@ -9,3 +9,7 @@ const props = defineProps({
 <template>
   <LocationView v-bind:baseUrl="props.baseurl"></LocationView>
 </template>
+
+<style>
+@import "assets/global.css";
+</style>
