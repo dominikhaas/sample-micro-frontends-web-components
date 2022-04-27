@@ -17,14 +17,13 @@ function showLocation(location: LocationDto) {
 
 <template>
   <div>
-    <v-list>
-      <v-list-item
+
+      <ul
         v-for="location in locations"
         v-bind:key="location"
         @click="showLocation(location)"
       >
-        <v-list-item-title>{{ location.title }}</v-list-item-title>
-      </v-list-item>
-    </v-list>
+        {{ location.title }}
+      </ul>
   </div>
 </template>

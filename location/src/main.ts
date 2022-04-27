@@ -9,6 +9,5 @@ loadFonts()
 const pinia = createPinia()
 
 createApp(App)
-    .use(vuetify)
     .use(pinia)
     .mount('#app')
