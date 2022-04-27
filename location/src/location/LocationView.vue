@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import LocationList from "@/location/LocationList.vue";
-import LocationForm from "@/location/LocationForm.vue";
+import LocationForm from "@/location/LocationDetails.vue";
 
 const props = defineProps({ baseUrl: String });
 </script>
