@@ -3,8 +3,15 @@ export interface LocationDto {
 }
 
 export class LocationService {
-  async getLocations(): Promise<LocationDto[]> {
-    return fetch("./locations.json").then((response) => {
+  async getLocations(baseUrl?: string): Promise<LocationDto[]> {
+    let url;
+    if(baseUrl) {
+      url = baseUrl + "/locations.json";
+    } else {
+      url = "./locations.json";
+    }
+
+    return fetch(url).then((response) => {
       if (!response.ok) {
         throw new Error(response.statusText);
       }

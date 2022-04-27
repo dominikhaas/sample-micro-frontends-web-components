@@ -6,8 +6,9 @@ import type { LocationDto } from "@/location/LocationService";
 const store = locationStore();
 const locations = computed(() => store.locations);
 
+const props = defineProps({baseUrl: String});
 onMounted(() => {
-  store.loadLocations();
+  store.loadLocations(props.baseUrl);
 });
 
 function showLocation(location: LocationDto) {

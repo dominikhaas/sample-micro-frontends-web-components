@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import LocationList from "@/location/LocationList.vue";
 import LocationForm from "@/location/LocationForm.vue";
+
+const props = defineProps({baseUrl: String});
 </script>
 
 <template>
   <div class="locations-view">
     <h1>Locations</h1>
-    <LocationList></LocationList>
+    <LocationList v-bind:baseUrl="props.baseUrl"></LocationList>
     <LocationForm></LocationForm>
   </div>
 </template>

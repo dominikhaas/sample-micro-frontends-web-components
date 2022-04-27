@@ -14,8 +14,8 @@ export const locationStore = defineStore("locationStore", {
       this.currentLocation = location;
     },
 
-    async loadLocations() {
-      this.locations = await new LocationService().getLocations();
+    async loadLocations(baseUrl?: string) {
+      this.locations = await new LocationService().getLocations(baseUrl);
     },
   },
 });
