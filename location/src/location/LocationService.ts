@@ -5,7 +5,7 @@ export interface LocationDto {
 export class LocationService {
   async getLocations(baseUrl?: string): Promise<LocationDto[]> {
     let url;
-    if(baseUrl) {
+    if (baseUrl) {
       url = baseUrl + "/locations.json";
     } else {
       url = "./locations.json";

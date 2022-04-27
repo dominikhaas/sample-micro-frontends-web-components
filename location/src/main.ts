@@ -1,15 +1,12 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import {createPinia} from "pinia";
+import { createApp } from "vue";
+import App from "./App.vue";
+import { createPinia } from "pinia";
 
 import { defineCustomElement } from "vue";
 
+const pinia = createPinia();
 
-const pinia = createPinia()
+createApp(App).use(pinia).mount("#location-app");
 
-createApp(App)
-    .use(pinia)
-    .mount('#location-app')
-
-const locationApp = defineCustomElement(App)
-customElements.define('location-app', locationApp)
+const locationApp = defineCustomElement(App);
+customElements.define("location-app", locationApp);

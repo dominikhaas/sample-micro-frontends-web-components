@@ -2,7 +2,7 @@
 import LocationList from "@/location/LocationList.vue";
 import LocationForm from "@/location/LocationForm.vue";
 
-const props = defineProps({baseUrl: String});
+const props = defineProps({ baseUrl: String });
 </script>
 
 <template>

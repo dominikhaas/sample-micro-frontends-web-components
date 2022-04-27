@@ -11,7 +11,7 @@ export default defineConfig({
       template: {
         compilerOptions: {
           // treat tags with prefix profile- as custom elements
-          isCustomElement: (tag) => tag.includes('profile-')
+          isCustomElement: (tag) => tag.includes('profile-') || tag.includes('location-')
         }
       }
     }),
