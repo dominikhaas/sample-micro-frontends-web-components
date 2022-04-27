@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import LocationView from "@/location/LocationView.vue";
+
+const props = defineProps({
+  baseurl: String,
+});
 </script>
 
 <template>
-  <LocationView></LocationView>
+  <LocationView v-bind:baseUrl="props.baseurl"></LocationView>
 </template>
